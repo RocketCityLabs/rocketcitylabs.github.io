@@ -18,7 +18,7 @@ layout: default
   {{ page.date | date: "%Y" }}
   by
   {% if page.author %}
-    <a href="{{ site.url }}/authors/{{ page.author }}.html">{{ page.author | url_param_escape }}</a>
+    <a href="{{ site.url }}/writers/{{ page.author }}.html">{{ page.author | url_param_escape }}</a>
   {% else %}
     <a href="{{ site.url }}/about.html">{{ site.organization }}</a>
   {% endif %}
