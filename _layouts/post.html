@@ -6,12 +6,6 @@ layout: default
   {{ page.title }}
 </h1>
 
-{% if page.image %}
-  <img src="{{ site.url }}/assets/img/{{ page.image }}">
-{% endif %}
-
-{{ content }}
-
 <span class="post-date">
   {{ site.data.settings.post_date_prefix }}
   {% assign d = page.date | date: "%-d"  %}
@@ -24,13 +18,17 @@ layout: default
   {{ page.date | date: "%Y" }}
   by
   {% if page.author %}
-    {{ page.author }}
+    <a href="{{ site.url }}/authors/{{ page.author }}.html">{{ page.author | url_param_escape }}</a>
   {% else %}
-    {{ site.author }}
+    <a href="{{ site.url }}/about.html">{{ site.organization }}</a>
   {% endif %}
 </span>
 
-{% include social-sharing.html %}
+{% if page.image %}
+  <img src="{{ site.url }}/assets/img/{{ page.image }}">
+{% endif %}
+
+{{ content }}
 
 {% include related-posts.html %}
 
