@@ -24,3 +24,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jekyll-paginate'
 gem 'jekyll-sitemap'
 gem 'jekyll-seo-tag'
+gem 'listen'
+gem 'wdm', '~> 0.1.1', :install_if => Gem.win_platform?
